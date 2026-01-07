@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+    margin: 0;
+    color: #38bdf8;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #94a3b8;
+}
+
+main {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.post-card {
+    background: #020617;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.post-card a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.post-card a:hover {
+    text-decoration: underline;
+}
+
+.blog-post h2 {
+    color: #38bdf8;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #020617;
+    margin-top: 40px;
+    color: #64748b;
+}
