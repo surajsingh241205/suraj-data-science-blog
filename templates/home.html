@@ -1,13 +1,50 @@
 {% extends "base.html" %}
 
-{% block content %}
-<h2>Blog</h2>
+{% block title %}Home - Suraj Singh{% endblock %}
 
-<div class="post-list">
-    {% for post in posts %}
-        <div class="post-card">
-            <h3><a href="/post/{{ post.slug }}">{{ post.title }}</a></h3>
-        </div>
-    {% endfor %}
+{% block content %}
+<div class="home-container">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Data Science & Analytics</h1>
+        <p class="hero-subtitle">
+            Insights, tutorials, and real-world learnings on Data Science, Machine Learning, and Analytics.
+        </p>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="posts-grid">
+
+        {% for post in posts %}
+        <article class="post-card">
+            <a href="{{ url_for('post', slug=post.slug) }}" class="card-link">
+
+                <!-- Image Placeholder -->
+                <div class="card-image">
+                    <div class="card-placeholder">
+                        <span>Data Science</span>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="card-content">
+                    <h2 class="card-title">{{ post.title }}</h2>
+
+                    <p class="card-description">
+                        {{ post.content | striptags | truncate(120) }}
+                    </p>
+
+                    <div class="card-meta">
+                        <span class="card-date">📅 {{ post.date if post.date else "2026" }}</span>
+                    </div>
+                </div>
+
+            </a>
+        </article>
+        {% endfor %}
+
+    </section>
+
 </div>
 {% endblock %}
