@@ -2,23 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Suraj Singh | Data Science Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Suraj Singh - Data Science Blog{% endblock %}</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <h1>Suraj Singh</h1>
-    <p>Data Science • Projects • Learning in Public</p>
-</header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
 
-<main>
-    {% block content %}{% endblock %}
-</main>
+            <!-- Brand -->
+            <div class="nav-brand">
+                <a href="{{ url_for('home') }}">Suraj Singh</a>
+            </div>
 
-<footer>
-    <p>© 2026 Suraj Singh – Built with Flask</p>
-</footer>
+            <!-- Social Icons -->
+            <div class="nav-social">
+                <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+
+                <p class="footer-text">
+                    © 2026 Suraj Singh. Built with Flask.
+                </p>
+
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" class="footer-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" class="footer-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener" class="footer-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="footer-icon" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
