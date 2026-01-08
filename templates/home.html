@@ -22,9 +22,14 @@
 
                 <!-- Image Placeholder -->
                 <div class="card-image">
+                    {% if post.image %}
+                    <img src="{{ post.image }}" alt="{{ post.title }}"
+                        style="width:100%; height:100%; object-fit:cover;">
+                    {% else %}
                     <div class="card-placeholder">
                         <span>Data Science</span>
                     </div>
+                    {% endif %}
                 </div>
 
                 <!-- Content -->

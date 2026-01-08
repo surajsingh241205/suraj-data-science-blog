@@ -1,26 +1,44 @@
 from flask import Flask, render_template, abort
 import os
-import markdown
+import markdown2
+import re
 
 app = Flask(__name__)
 
 POSTS_DIR = "posts"
 
+
 def get_all_posts():
     posts = []
+
     for filename in os.listdir(POSTS_DIR):
         if filename.endswith(".md"):
             path = os.path.join(POSTS_DIR, filename)
+
             with open(path, "r", encoding="utf-8") as file:
                 content = file.read()
-                html = markdown.markdown(content)
-                title = content.split('\n')[0].replace("#", "").strip()
+
+                # Extract first image
+                image_match = re.search(r'!\[.*?\]\((.*?)\)', content)
+                image_url = image_match.group(1) if image_match else None
+
+                # Extract title (first markdown heading)
+                title_match = re.search(r'^#\s+(.*)', content, re.MULTILINE)
+                title = title_match.group(1).strip() if title_match else "Untitled Post"
+
+                # Convert markdown to HTML
+                html = markdown2.markdown(content)
+
+
                 slug = filename.replace(".md", "")
+
                 posts.append({
                     "title": title,
                     "slug": slug,
-                    "content": html
+                    "content": html,
+                    "image": image_url
                 })
+
     return posts
 
 @app.route("/")
@@ -30,16 +48,23 @@ def home():
 
 @app.route("/post/<slug>")
 def post(slug):
-    file_path = os.path.join(POSTS_DIR, f"{slug}.md")
+    file_path = os.path.join("posts", f"{slug}.md")
+
     if not os.path.exists(file_path):
         abort(404)
 
     with open(file_path, "r", encoding="utf-8") as file:
         content = file.read()
-        html = markdown.markdown(content)
 
-    title = content.split('\n')[0].replace("#", "").strip()
+    # Extract title from markdown
+    title_match = re.search(r'^#\s+(.*)', content, re.MULTILINE)
+    title = title_match.group(1).strip() if title_match else "Untitled Post"
+
+    # Convert markdown to HTML
+    html = markdown2.markdown(content)
+
     return render_template("post.html", title=title, content=html)
+
 
 
 

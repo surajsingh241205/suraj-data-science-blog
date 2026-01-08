@@ -1,3 +1,6 @@
+![cover](/static/images/welcome.jpg)
+
+
 # Welcome to My Data Science Blog
 
 This blog is where I document my learning journey in Data Science, Machine Learning, and real-world projects.
