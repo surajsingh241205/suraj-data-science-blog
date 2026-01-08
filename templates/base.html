@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,22 +25,49 @@
         <div class="nav-container">
 
             <!-- Brand -->
-            <div class="nav-brand">
-                <a href="{{ url_for('home') }}">Suraj Singh</a>
+            <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+                <a href="{{ url_for('home') }}"
+                    style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+
+                    <!-- Profile Image -->
+                    <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Suraj Singh" style="
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid #e5e7eb;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.15)'"
+                        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'" />
+
+                    <!-- Name -->
+                    <span style="
+            font-weight: 600;
+            font-size: 1rem;
+            margin-left: 6px;
+        ">
+                        Suraj Singh
+                    </span>
+                </a>
             </div>
+
 
             <!-- Social Icons -->
             <div class="nav-social">
-                <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
+                <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="social-icon"
+                    aria-label="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -62,16 +90,20 @@
                 </p>
 
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" class="footer-icon" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener"
+                        class="footer-icon" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" class="footer-icon" aria-label="GitHub">
+                    <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" class="footer-icon"
+                        aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener" class="footer-icon" aria-label="Instagram">
+                    <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank" rel="noopener"
+                        class="footer-icon" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="footer-icon" aria-label="WhatsApp">
+                    <a href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener" class="footer-icon"
+                        aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -81,4 +113,5 @@
     </footer>
 
 </body>
+
 </html>
