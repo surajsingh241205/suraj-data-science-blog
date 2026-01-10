@@ -2,6 +2,8 @@ from flask import Flask, render_template, abort
 import os
 import markdown2
 import re
+from flask import send_from_directory
+
 
 app = Flask(__name__)
 
@@ -65,7 +67,9 @@ def post(slug):
 
     return render_template("post.html", title=title, content=html)
 
-
+@app.route('/google7fd7bebf24bb122c.html')
+def gsc_verification():
+    return send_from_directory('.', 'google7fd7bebf24bb122c.html')
 
 
 if __name__ == "__main__":
