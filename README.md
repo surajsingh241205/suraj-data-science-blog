@@ -1,5 +1,5 @@
 # 🚀 Suraj Singh – Data Science Blog
-
+## Link - https://suraj-data-science-and-analytics-blogs.onrender.com/
 This is my personal blog where I document my journey in **Data Science, Machine Learning, Analytics, and real-world projects**.
 
 This is not a tutorial dump.  
