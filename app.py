@@ -30,14 +30,16 @@ def get_all_posts():
 
                 # Convert markdown to HTML (enable common extras)
                 html = markdown2.markdown(
-                    content,
-                    extras=[
-                        "fenced-code-blocks",
-                        "tables",
-                        "code-friendly",
-                        "metadata"
-                    ],
-                )
+    content,
+    extras=[
+        "fenced-code-blocks",
+        "tables",
+        "strike",
+        "task_list",
+        "code-friendly",
+        "cuddled-lists"
+    ]
+)
 
 
                 slug = filename.replace(".md", "")
