@@ -28,8 +28,16 @@ def get_all_posts():
                 title_match = re.search(r'^#\s+(.*)', content, re.MULTILINE)
                 title = title_match.group(1).strip() if title_match else "Untitled Post"
 
-                # Convert markdown to HTML
-                html = markdown2.markdown(content)
+                # Convert markdown to HTML (enable common extras)
+                html = markdown2.markdown(
+                    content,
+                    extras=[
+                        "fenced-code-blocks",
+                        "tables",
+                        "code-friendly",
+                        "metadata"
+                    ],
+                )
 
 
                 slug = filename.replace(".md", "")
@@ -62,8 +70,11 @@ def post(slug):
     title_match = re.search(r'^#\s+(.*)', content, re.MULTILINE)
     title = title_match.group(1).strip() if title_match else "Untitled Post"
 
-    # Convert markdown to HTML
-    html = markdown2.markdown(content)
+    # Convert markdown to HTML (enable common extras)
+    html = markdown2.markdown(
+        content,
+        extras=["fenced-code-blocks", "tables", "code-friendly", "metadata"],
+    )
 
     return render_template("post.html", title=title, content=html)
 
