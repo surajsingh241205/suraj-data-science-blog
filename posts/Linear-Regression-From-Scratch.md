@@ -1,5 +1,7 @@
 ![Cover](https://miro.medium.com/v2/resize:fit:1400/1*UgSLpWRxyvkbEd-eQphP7g.png)
-
+---
+date: 2026-01-29
+---
 # Linear Regression From Scratch – A Conceptual and Mathematical Walkthrough
 
 ## Introduction

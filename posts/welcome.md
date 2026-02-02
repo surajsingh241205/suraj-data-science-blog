@@ -1,5 +1,7 @@
 ![cover](/static/images/welcome.jpg)
-
+---
+date: 2026-01-23
+---
 # Welcome to My Data Science Blog
 
 This blog is where I document my learning journey in Data Science, Machine Learning, and real-world projects.

@@ -1,5 +1,7 @@
 ![cover](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcb5urZPhIqQBlHgMUGGF_-vc11fBfzhnAoA&s)
-
+---
+date: 2026-01-25
+---
 # Introduction to machine learning
 In this post we are going to learn about what is machine learning, Ai vs ML vs DL comparision and Types of machine learning. 
 

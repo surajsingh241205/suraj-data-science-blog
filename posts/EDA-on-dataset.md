@@ -1,4 +1,7 @@
 ![cover](https://www.guvi.in/blog/wp-content/uploads/2024/08/2-2.webp)
+---
+date: 2026-01-26
+---
 # Applying EDA to Feature Selection on a Real-World Insurance Dataset
 
 Today, I applied the complete **EDA → Data Cleaning → Data Preprocessing → Feature Engineering → Feature Selection** workflow on a real-world **insurance dataset**.

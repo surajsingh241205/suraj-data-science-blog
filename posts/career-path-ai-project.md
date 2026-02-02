@@ -1,5 +1,7 @@
 ![Cover](/static/images/careerpath-ai.png)
-
+---
+date: 2026-02-01
+---
 # 🎓 CareerPath AI - AI Career Guidance for Indian Students (Hackathon Project)
 
 CareerPath AI is an AI-powered career guidance platform designed to help Indian students make informed academic and career decisions using **Retrieval-Augmented Generation (RAG)**.

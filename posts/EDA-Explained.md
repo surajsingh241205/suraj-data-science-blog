@@ -1,4 +1,7 @@
 ![cover](https://miro.medium.com/v2/resize:fit:1200/1*LCfBiyFvOZQtEGI-vHXGFw.jpeg)
+---
+date: 2026-01-28
+---
 # Exploratory Data Analysis (EDA) & Data Preparation for Machine Learning
 
 Today, I focused on understanding **Exploratory Data Analysis (EDA)** and how it fits into the overall machine learning workflow. Instead of jumping directly into building models, I learned why understanding data first is non-negotiable in real-world ML projects.

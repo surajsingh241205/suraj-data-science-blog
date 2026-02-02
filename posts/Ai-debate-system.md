@@ -1,5 +1,9 @@
 ![cover](/static/images/ai-debate-system.png)
 
+---
+date: 2026-02-02
+---
+
 # AI Debate System  
 ### Multi-Agent LLM Application
 

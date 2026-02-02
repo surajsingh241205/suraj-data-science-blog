@@ -19,6 +19,9 @@ def get_all_posts():
 
             with open(path, "r", encoding="utf-8") as file:
                 content = file.read()
+                # Extract date from frontmatter
+                date_match = re.search(r'date:\s*(\d{4}-\d{2}-\d{2})', content)
+                post_date = date_match.group(1) if date_match else "1970-01-01"
 
                 # Extract first image
                 image_match = re.search(r'!\[.*?\]\((.*?)\)', content)
@@ -48,9 +51,10 @@ def get_all_posts():
                     "title": title,
                     "slug": slug,
                     "content": html,
-                    "image": image_url
-                })
-
+                    "image": image_url,
+                    "date": post_date
+})
+    posts.sort(key=lambda x: x["date"], reverse=True)
     return posts
 
 @app.route("/")

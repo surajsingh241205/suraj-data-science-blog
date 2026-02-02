@@ -1,6 +1,8 @@
 ![cover](/static/images/data-science-roadmap.jpg)
 
-
+---
+date: 2026-01-24
+---
 # My Practical Data Science Learning Roadmap (From Beginner to Job-Ready)
 
 If you are confused about where to start in Data Science, what to learn, and in what order – you are not alone.  

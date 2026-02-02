@@ -1,5 +1,7 @@
 ![Cover](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1JPzIAHH7bBp619OCldvhCISIQKkcz0N19g&s)
-
+---
+date: 2026-01-31
+---
 # Predicting Customer Churn Using Machine Learning: A Practical Case Study
 
 **[Source code](https://github.com/surajsingh241205/Data-Science-Minor-And-Major-Projects/tree/main/Telco%20customer%20churn%20EDA)**

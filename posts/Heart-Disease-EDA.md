@@ -1,4 +1,7 @@
 ![Cover](https://storage.googleapis.com/kaggle-datasets-images/7282214/11609951/1946f7eb19318a651e6667d88fdbaae4/dataset-cover.png?t=2025-04-29-08-27-04)
+---
+date: 2026-01-27
+---
 # From Raw Data to Model-Ready Features: An End-to-End EDA on a Heart Disease Dataset
 
 **[Source code](https://github.com/surajsingh241205/Data-Science-Minor-And-Major-Projects/tree/main/Heart%20EDA)**
